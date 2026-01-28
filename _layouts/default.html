@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title | default: site.title }}</title>
+  <meta name="description" content="{{ site.description }}">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+  <div class="container">
+    <!-- Progress Bar -->
+    <div class="progress-container">
+      <div class="progress-header">
+        <span class="progress-label">🏆 Your Progress</span>
+        <span class="progress-percent" id="progress-percent">0%</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill" id="progress-fill"></div>
+      </div>
+      <p class="progress-text" id="progress-text">0 of 8 exercises completed</p>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+      {{ content }}
+    </main>
+
+    <!-- Keyboard Shortcuts Reference -->
+    <div class="shortcuts-box">
+      <h2>⚡ Keyboard Shortcuts</h2>
+      <div class="shortcuts-grid">
+        <div class="shortcut"><kbd>R</kbd> Rectangle</div>
+        <div class="shortcut"><kbd>D</kbd> Diamond</div>
+        <div class="shortcut"><kbd>O</kbd> Ellipse</div>
+        <div class="shortcut"><kbd>A</kbd> Arrow</div>
+        <div class="shortcut"><kbd>L</kbd> Line</div>
+        <div class="shortcut"><kbd>T</kbd> Text</div>
+        <div class="shortcut"><kbd>V</kbd> Selection</div>
+        <div class="shortcut"><kbd>1</kbd> Hand (pan)</div>
+        <div class="shortcut"><kbd>⌘/Ctrl+D</kbd> Duplicate</div>
+        <div class="shortcut"><kbd>⌘/Ctrl+G</kbd> Group</div>
+        <div class="shortcut"><kbd>⌘/Ctrl+[</kbd> Send back</div>
+        <div class="shortcut"><kbd>⌘/Ctrl+]</kbd> Bring front</div>
+        <div class="shortcut"><kbd>⌘/Ctrl+'</kbd> Toggle grid</div>
+        <div class="shortcut"><kbd>⌘/Ctrl+Z</kbd> Undo</div>
+      </div>
+    </div>
+
+    <!-- Ready Checklist -->
+    <div class="ready-box">
+      <h2>✅ You're Ready When You Can...</h2>
+      <ul>
+        <li>Quickly draw and label components without fumbling</li>
+        <li>Create clean, readable layouts with proper alignment</li>
+        <li>Show clear data/request flows with labeled arrows</li>
+        <li>Use boundaries to organize complex systems</li>
+        <li>Add useful annotations without cluttering the diagram</li>
+      </ul>
+    </div>
+
+    <footer>
+      <p>💡 Practice until diagramming feels automatic — focus on design thinking, not tool mechanics!</p>
+      <p class="generated-time">Generated on {{ site.time | date: "%B %d, %Y at %H:%M" }}</p>
+    </footer>
+  </div>
+
+  <script>
+    (function() {
+      const STORAGE_KEY = 'excalidraw-guide-progress';
+      const TOTAL_EXERCISES = 8;
+
+      // Load saved progress
+      function loadProgress() {
+        try {
+          return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {};
+        } catch {
+          return {};
+        }
+      }
+
+      // Save progress
+      function saveProgress(progress) {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
+      }
+
+      // Update progress bar
+      function updateProgressBar(progress) {
+        const completed = Object.values(progress).filter(Boolean).length;
+        const percent = Math.round((completed / TOTAL_EXERCISES) * 100);
+        
+        document.getElementById('progress-fill').style.width = percent + '%';
+        document.getElementById('progress-percent').textContent = percent + '%';
+        document.getElementById('progress-text').textContent = 
+          completed + ' of ' + TOTAL_EXERCISES + ' exercises completed';
+      }
+
+      // Initialize exercises
+      function initExercises() {
+        const progress = loadProgress();
+        const exercises = document.querySelectorAll('.exercise');
+
+        exercises.forEach(exercise => {
+          const id = exercise.getAttribute('data-id');
+          const header = exercise.querySelector('.exercise-header');
+          const content = exercise.querySelector('.exercise-content');
+          const checkbox = exercise.querySelector('.exercise-checkbox');
+
+          // Set initial state
+          if (progress[id]) {
+            exercise.classList.add('completed');
+            checkbox.checked = true;
+          }
+
+          // Toggle expand/collapse
+          header.addEventListener('click', (e) => {
+            if (e.target === checkbox || e.target.closest('.checkbox-wrapper')) return;
+            exercise.classList.toggle('expanded');
+          });
+
+          // Handle checkbox
+          checkbox.addEventListener('change', () => {
+            progress[id] = checkbox.checked;
+            exercise.classList.toggle('completed', checkbox.checked);
+            saveProgress(progress);
+            updateProgressBar(progress);
+          });
+        });
+
+        updateProgressBar(progress);
+      }
+
+      // Initialize timed challenges
+      function initChallenges() {
+        const challenges = document.querySelectorAll('.challenge');
+        
+        challenges.forEach(challenge => {
+          challenge.addEventListener('click', () => {
+            challenges.forEach(c => c.classList.remove('active'));
+            challenge.classList.add('active');
+          });
+        });
+
+        // Activate first challenge
+        if (challenges.length > 0) {
+          challenges[0].classList.add('active');
+        }
+      }
+
+      // Run on DOM ready
+      document.addEventListener('DOMContentLoaded', () => {
+        initExercises();
+        initChallenges();
+      });
+    })();
+  </script>
+</body>
+</html>
