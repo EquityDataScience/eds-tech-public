@@ -43,7 +43,7 @@ An interactive guide to master Excalidraw for system design interviews.
 
 Wait ~1 minute, then visit:
 ```
-https://equitydatascience.github.io/eds-tech-public/
+https://YOUR-USERNAME.github.io/eds-tech-public/
 ```
 
 Done! 🎉
