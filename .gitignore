@@ -1,0 +1,25 @@
+# Jekyll build output
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Ruby/Bundler
+*.gem
+.bundle/
+vendor/bundle/
+
+# macOS
+.DS_Store
+*.swp
+*~
+
+# IDE/Editor
+.idea/
+.vscode/
+*.sublime-*
+
+# Environment files
+.env
+.env.*
+!.env.example
