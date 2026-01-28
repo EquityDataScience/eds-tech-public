@@ -27,21 +27,21 @@ permalink: /system-design-diagramming/
 
 <div class="exercise" data-id="components">
   <div class="exercise-header">
-    <div class="exercise-info">
-      <div class="exercise-icon">🖥️</div>
-      <div>
-        <div class="exercise-title">Drawing System Components</div>
-        <div class="exercise-time">⏱️ 5 min</div>
-      </div>
-    </div>
-    <div class="exercise-actions">
-      <div class="checkbox-wrapper">
-        <input type="checkbox" class="exercise-checkbox" aria-label="Mark as complete">
+    <button type="button" class="exercise-toggle" aria-expanded="false" aria-controls="exercise-content-components">
+      <div class="exercise-info">
+        <div class="exercise-icon">🖥️</div>
+        <div>
+          <div class="exercise-title">Drawing System Components</div>
+          <div class="exercise-time">⏱️ 5 min</div>
+        </div>
       </div>
       <span class="chevron">▶</span>
+    </button>
+    <div class="checkbox-wrapper">
+      <input type="checkbox" class="exercise-checkbox" aria-label="Mark as complete">
     </div>
   </div>
-  <div class="exercise-content">
+  <div class="exercise-content" id="exercise-content-components">
     <ol>
       <li>Press <kbd>R</kbd> for rectangles — use these for services, servers, clients, and most components</li>
       <li>Press <kbd>D</kbd> for diamonds — useful for decision points, load balancers, or routers</li>
@@ -61,21 +61,21 @@ permalink: /system-design-diagramming/
 
 <div class="exercise" data-id="connections">
   <div class="exercise-header">
-    <div class="exercise-info">
-      <div class="exercise-icon">➡️</div>
-      <div>
-        <div class="exercise-title">Showing Data & Request Flow</div>
-        <div class="exercise-time">⏱️ 5 min</div>
-      </div>
-    </div>
-    <div class="exercise-actions">
-      <div class="checkbox-wrapper">
-        <input type="checkbox" class="exercise-checkbox" aria-label="Mark as complete">
+    <button type="button" class="exercise-toggle" aria-expanded="false" aria-controls="exercise-content-connections">
+      <div class="exercise-info">
+        <div class="exercise-icon">➡️</div>
+        <div>
+          <div class="exercise-title">Showing Data & Request Flow</div>
+          <div class="exercise-time">⏱️ 5 min</div>
+        </div>
       </div>
       <span class="chevron">▶</span>
+    </button>
+    <div class="checkbox-wrapper">
+      <input type="checkbox" class="exercise-checkbox" aria-label="Mark as complete">
     </div>
   </div>
-  <div class="exercise-content">
+  <div class="exercise-content" id="exercise-content-connections">
     <ol>
       <li>Press <kbd>A</kbd> for arrows — these show how data or requests move between components</li>
       <li>Attach arrow endpoints to shapes (they'll snap) so they stay connected when you reorganize</li>
@@ -95,21 +95,21 @@ permalink: /system-design-diagramming/
 
 <div class="exercise" data-id="boundaries">
   <div class="exercise-header">
-    <div class="exercise-info">
-      <div class="exercise-icon">📦</div>
-      <div>
-        <div class="exercise-title">System Boundaries & Grouping</div>
-        <div class="exercise-time">⏱️ 5 min</div>
-      </div>
-    </div>
-    <div class="exercise-actions">
-      <div class="checkbox-wrapper">
-        <input type="checkbox" class="exercise-checkbox" aria-label="Mark as complete">
+    <button type="button" class="exercise-toggle" aria-expanded="false" aria-controls="exercise-content-boundaries">
+      <div class="exercise-info">
+        <div class="exercise-icon">📦</div>
+        <div>
+          <div class="exercise-title">System Boundaries & Grouping</div>
+          <div class="exercise-time">⏱️ 5 min</div>
+        </div>
       </div>
       <span class="chevron">▶</span>
+    </button>
+    <div class="checkbox-wrapper">
+      <input type="checkbox" class="exercise-checkbox" aria-label="Mark as complete">
     </div>
   </div>
-  <div class="exercise-content">
+  <div class="exercise-content" id="exercise-content-boundaries">
     <ol>
       <li>Draw a large rectangle as a boundary box around related components</li>
       <li>Press <kbd>Cmd/Ctrl</kbd> + <kbd>[</kbd> to send it to the back so components stay visible</li>
@@ -129,21 +129,21 @@ permalink: /system-design-diagramming/
 
 <div class="exercise" data-id="annotations">
   <div class="exercise-header">
-    <div class="exercise-info">
-      <div class="exercise-icon">📝</div>
-      <div>
-        <div class="exercise-title">Technical Annotations</div>
-        <div class="exercise-time">⏱️ 5 min</div>
-      </div>
-    </div>
-    <div class="exercise-actions">
-      <div class="checkbox-wrapper">
-        <input type="checkbox" class="exercise-checkbox" aria-label="Mark as complete">
+    <button type="button" class="exercise-toggle" aria-expanded="false" aria-controls="exercise-content-annotations">
+      <div class="exercise-info">
+        <div class="exercise-icon">📝</div>
+        <div>
+          <div class="exercise-title">Technical Annotations</div>
+          <div class="exercise-time">⏱️ 5 min</div>
+        </div>
       </div>
       <span class="chevron">▶</span>
+    </button>
+    <div class="checkbox-wrapper">
+      <input type="checkbox" class="exercise-checkbox" aria-label="Mark as complete">
     </div>
   </div>
-  <div class="exercise-content">
+  <div class="exercise-content" id="exercise-content-annotations">
     <ol>
       <li>Press <kbd>T</kbd> for text — add notes about key decisions or constraints</li>
       <li>Annotate important details: protocols, data formats, or behavior notes</li>
@@ -163,21 +163,21 @@ permalink: /system-design-diagramming/
 
 <div class="exercise" data-id="layout">
   <div class="exercise-header">
-    <div class="exercise-info">
-      <div class="exercise-icon">🎯</div>
-      <div>
-        <div class="exercise-title">Professional Layout Patterns</div>
-        <div class="exercise-time">⏱️ 5 min</div>
-      </div>
-    </div>
-    <div class="exercise-actions">
-      <div class="checkbox-wrapper">
-        <input type="checkbox" class="exercise-checkbox" aria-label="Mark as complete">
+    <button type="button" class="exercise-toggle" aria-expanded="false" aria-controls="exercise-content-layout">
+      <div class="exercise-info">
+        <div class="exercise-icon">🎯</div>
+        <div>
+          <div class="exercise-title">Professional Layout Patterns</div>
+          <div class="exercise-time">⏱️ 5 min</div>
+        </div>
       </div>
       <span class="chevron">▶</span>
+    </button>
+    <div class="checkbox-wrapper">
+      <input type="checkbox" class="exercise-checkbox" aria-label="Mark as complete">
     </div>
   </div>
-  <div class="exercise-content">
+  <div class="exercise-content" id="exercise-content-layout">
     <ol>
       <li>Arrange components in a logical flow — typically left-to-right or top-to-bottom</li>
       <li>Put users/clients on one side, data storage on the opposite side</li>
@@ -197,21 +197,21 @@ permalink: /system-design-diagramming/
 
 <div class="exercise" data-id="visual-hierarchy">
   <div class="exercise-header">
-    <div class="exercise-info">
-      <div class="exercise-icon">🎨</div>
-      <div>
-        <div class="exercise-title">Visual Hierarchy & Emphasis</div>
-        <div class="exercise-time">⏱️ 5 min</div>
-      </div>
-    </div>
-    <div class="exercise-actions">
-      <div class="checkbox-wrapper">
-        <input type="checkbox" class="exercise-checkbox" aria-label="Mark as complete">
+    <button type="button" class="exercise-toggle" aria-expanded="false" aria-controls="exercise-content-visual-hierarchy">
+      <div class="exercise-info">
+        <div class="exercise-icon">🎨</div>
+        <div>
+          <div class="exercise-title">Visual Hierarchy & Emphasis</div>
+          <div class="exercise-time">⏱️ 5 min</div>
+        </div>
       </div>
       <span class="chevron">▶</span>
+    </button>
+    <div class="checkbox-wrapper">
+      <input type="checkbox" class="exercise-checkbox" aria-label="Mark as complete">
     </div>
   </div>
-  <div class="exercise-content">
+  <div class="exercise-content" id="exercise-content-visual-hierarchy">
     <ol>
       <li>Use color sparingly to categorize or highlight (select shape → fill color)</li>
       <li>Try a simple scheme: one color for compute, another for storage, another for external</li>
@@ -231,21 +231,21 @@ permalink: /system-design-diagramming/
 
 <div class="exercise" data-id="multiple-flows">
   <div class="exercise-header">
-    <div class="exercise-info">
-      <div class="exercise-icon">🔀</div>
-      <div>
-        <div class="exercise-title">Showing Multiple Flows</div>
-        <div class="exercise-time">⏱️ 5 min</div>
-      </div>
-    </div>
-    <div class="exercise-actions">
-      <div class="checkbox-wrapper">
-        <input type="checkbox" class="exercise-checkbox" aria-label="Mark as complete">
+    <button type="button" class="exercise-toggle" aria-expanded="false" aria-controls="exercise-content-multiple-flows">
+      <div class="exercise-info">
+        <div class="exercise-icon">🔀</div>
+        <div>
+          <div class="exercise-title">Showing Multiple Flows</div>
+          <div class="exercise-time">⏱️ 5 min</div>
+        </div>
       </div>
       <span class="chevron">▶</span>
+    </button>
+    <div class="checkbox-wrapper">
+      <input type="checkbox" class="exercise-checkbox" aria-label="Mark as complete">
     </div>
   </div>
-  <div class="exercise-content">
+  <div class="exercise-content" id="exercise-content-multiple-flows">
     <ol>
       <li>Use different arrow styles or colors to distinguish different flows</li>
       <li>Show branching by drawing multiple arrows from one component</li>
@@ -265,21 +265,21 @@ permalink: /system-design-diagramming/
 
 <div class="exercise" data-id="speed">
   <div class="exercise-header">
-    <div class="exercise-info">
-      <div class="exercise-icon">⚡</div>
-      <div>
-        <div class="exercise-title">Speed & Efficiency</div>
-        <div class="exercise-time">⏱️ 5 min</div>
-      </div>
-    </div>
-    <div class="exercise-actions">
-      <div class="checkbox-wrapper">
-        <input type="checkbox" class="exercise-checkbox" aria-label="Mark as complete">
+    <button type="button" class="exercise-toggle" aria-expanded="false" aria-controls="exercise-content-speed">
+      <div class="exercise-info">
+        <div class="exercise-icon">⚡</div>
+        <div>
+          <div class="exercise-title">Speed & Efficiency</div>
+          <div class="exercise-time">⏱️ 5 min</div>
+        </div>
       </div>
       <span class="chevron">▶</span>
+    </button>
+    <div class="checkbox-wrapper">
+      <input type="checkbox" class="exercise-checkbox" aria-label="Mark as complete">
     </div>
   </div>
-  <div class="exercise-content">
+  <div class="exercise-content" id="exercise-content-speed">
     <ol>
       <li>Use <kbd>Cmd/Ctrl</kbd> + <kbd>D</kbd> to duplicate styled components quickly</li>
       <li>Create one well-styled box, then duplicate it for consistency</li>

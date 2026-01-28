@@ -168,16 +168,37 @@ main h2 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem;
-  cursor: pointer;
-  user-select: none;
+  padding: 0.5rem 1rem 0.5rem 0;
+  gap: 0.75rem;
 }
 
-.exercise-header:hover {
+.exercise-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+  padding: 0.5rem 0.75rem 0.5rem 1rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  text-align: left;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  border-radius: 0.5rem;
+}
+
+.exercise-toggle:hover {
   background: #f9fafb;
 }
 
-.exercise.completed .exercise-header:hover {
+.exercise-toggle:focus {
+  outline: 2px solid #4f46e5;
+  outline-offset: 2px;
+}
+
+.exercise.completed .exercise-toggle:hover {
   background: #dcfce7;
 }
 

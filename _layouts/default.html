@@ -109,8 +109,7 @@
 
         exercises.forEach(exercise => {
           const id = exercise.getAttribute('data-id');
-          const header = exercise.querySelector('.exercise-header');
-          const content = exercise.querySelector('.exercise-content');
+          const toggleButton = exercise.querySelector('.exercise-toggle');
           const checkbox = exercise.querySelector('.exercise-checkbox');
 
           // Set initial state
@@ -119,10 +118,10 @@
             checkbox.checked = true;
           }
 
-          // Toggle expand/collapse
-          header.addEventListener('click', (e) => {
-            if (e.target === checkbox || e.target.closest('.checkbox-wrapper')) return;
-            exercise.classList.toggle('expanded');
+          // Toggle expand/collapse via button (handles Enter/Space automatically)
+          toggleButton.addEventListener('click', () => {
+            const isExpanded = exercise.classList.toggle('expanded');
+            toggleButton.setAttribute('aria-expanded', isExpanded);
           });
 
           // Handle checkbox
