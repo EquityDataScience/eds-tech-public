@@ -81,7 +81,14 @@
 
       // Save progress
       function saveProgress(progress) {
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
+        if (typeof localStorage === 'undefined') {
+          return;
+        }
+        try {
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
+        } catch (e) {
+          console.warn('Failed to save progress to localStorage:', e);
+        }
       }
 
       // Update progress bar
