@@ -109,8 +109,11 @@ To test locally before deploying:
 # Install Jekyll (requires Ruby)
 gem install bundler jekyll
 
+# Install dependencies
+bundle install
+
 # Run local server
-bundle exec jekyll serve
+./run.sh
 
 # Visit http://localhost:4000
 ```
