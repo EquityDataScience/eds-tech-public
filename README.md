@@ -15,7 +15,7 @@ An interactive guide to master Excalidraw for system design interviews.
 ### Step 1: Create Repository
 
 1. Go to [github.com/new](https://github.com/new)
-2. Name it `excalidraw-guide` (or anything you like)
+2. Name it `eds-tech-public` (or anything you like)
 3. Keep it **Public**
 4. Click **Create repository**
 
@@ -43,7 +43,7 @@ An interactive guide to master Excalidraw for system design interviews.
 
 Wait ~1 minute, then visit:
 ```
-https://YOUR-USERNAME.github.io/excalidraw-guide/
+https://YOUR-USERNAME.github.io/eds-tech-public/
 ```
 
 Done! 🎉
@@ -53,7 +53,7 @@ Done! 🎉
 ## Project Structure
 
 ```
-excalidraw-guide/
+eds-tech-public/
 ├── _config.yml          # Jekyll site configuration
 ├── _layouts/
 │   └── default.html     # Main template with JavaScript
@@ -109,8 +109,11 @@ To test locally before deploying:
 # Install Jekyll (requires Ruby)
 gem install bundler jekyll
 
+# Install dependencies
+bundle install
+
 # Run local server
-bundle exec jekyll serve
+./run.sh
 
 # Visit http://localhost:4000
 ```

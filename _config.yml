@@ -1,0 +1,14 @@
+title: EDS Engineering
+description: EDS Engineering technical resources
+baseurl: "/eds-tech-public"
+url: ""
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  auto_ids: true
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
